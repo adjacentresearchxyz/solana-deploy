@@ -2,7 +2,7 @@
   become: true
   become_user: solana
   template:
-    src: validator.j2
+    src: ../utils/validator.j2
     dest: /home/solana/validator.sh
     owner: solana
     group: solana
@@ -12,7 +12,7 @@
   become: true
   become_user: root
   template:
-    src: sol.service
+    src: ../services/sol.service
     dest: /etc/systemd/system/sol.service
     owner: root
     group: root
@@ -22,7 +22,7 @@
   become: true
   become_user: solana
   template:
-    src: restart.sh 
+    src: ../utils/restart.sh 
     dest: /home/solana/restart.sh
     owner: solana
     group: solana
@@ -32,7 +32,7 @@
   become: true
   become_user: solana
   template:
-    src: snapcheck.py
+    src: ../utils/snapcheck.py
     dest: /mnt/snapcheck.py
     owner: solana
     group: solana
@@ -41,7 +41,7 @@
   become: true
   become_user: solana
   template:
-    src: snapshot-finder.py
+    src: ../utils/snapshot-finder.py
     dest: /mnt/snapshot-finder.py
     owner: solana
     group: solana

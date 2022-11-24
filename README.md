@@ -20,30 +20,14 @@ The goal of the Autoclock RPC ansible playbook is to have you caught up on the S
   * 512 GB RAM if you want to use ramdisk/tmpfs and store the accounts db in RAM (we use 300 GB for ram disk). without tmpfs, the ram requirement can be significantly lower (~256 GB)
   * 3-4 TB (multiple disks is okay - i.e. 2x 1.9TB - because the ansible playbook stripes them together)
 
-### Step 1: SSH into your machine
- 
-
-### Step 2: Start a screen session
+### Provision a Machine 
 ```
-screen -S sol
-```
-
-### Step 3: Install ansible
-```
-sudo apt-get install ansible -y
+cd providers/latitude
+terraform init 
+terraform apply
 ```
 
-### Step 4: Clone the autoclock-rpc repository
-```
-git clone https://github.com/overclock-validator/autoclock-rpc.git
-```
-
-### Step 5: cd into the autoclock-rpc folder
-```
-cd autoclock-rpc
-```
-
-### Step 6: Run the ansible command
+### Run the ansible command to provision machine
 * this command can take between 10-20 minutes based on the specs of the machine
 * it takes long because it does everything necessary to start the validator (format disks, checkout the solana repo and build it, download the latest snapshot, etc.)
 * make sure that the solana_version is up to date (see below)

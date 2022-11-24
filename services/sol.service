@@ -15,4 +15,3 @@ ExecStart=/home/solana/validator.sh
 
 [Install]
 WantedBy=multi-user.target
-
