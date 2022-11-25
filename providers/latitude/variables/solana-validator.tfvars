@@ -1,4 +1,3 @@
-organization = "adjacent"
 ssh_public_key = <PUBLIC KEY PATH>
 latitudesh_token = <TOKEN>
 region = "MH1"

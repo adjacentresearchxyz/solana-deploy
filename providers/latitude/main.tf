@@ -1,8 +1,4 @@
 # Define Variables
-variable "organization" {
-    description = "Organization and Workspace name"
-}
-
 variable "latitudesh_token" {
   description = "Latitude.sh API token"
 }
@@ -51,11 +47,11 @@ terraform {
   }
 
   backend "remote" {
-    organization = vars.organization
+    organization = "Adjacent"
     hostname     = "app.terraform.io"
 
     workspaces {
-      prefix = vars.organization + "-"
+      prefix = "adjacent-"
     }
   }
 }
