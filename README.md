@@ -5,6 +5,7 @@ Deploy a Solana Validator and/or RPC with Terraform and Ansible
 ### Provision a Machine 
 ```
 cd providers/latitude
+cp variables/solana-validator.tfvars *.auto.tfvars
 terraform init 
 terraform apply
 ```
