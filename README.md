@@ -11,7 +11,7 @@ cd providers/latitude
 # since terraform cloud backend doesn't support -var-file link it 
 ln -s variables/solana-validators.tfvars ./*.auto.tfvars
 
-# initalize and apply
+# initialize and apply
 terraform init 
 terraform apply
 ```
