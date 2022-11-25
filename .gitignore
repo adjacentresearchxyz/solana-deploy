@@ -10,7 +10,8 @@ ledger/
 
 # Local .terraform directories
 **/.terraform/*
-.terraform.lock.hc1
+**/.terraform.lock.hc1
+providers/latitude/.terraform
 
 # .tfstate files
 *.tfstate
