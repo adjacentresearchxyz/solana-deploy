@@ -8,11 +8,11 @@ terraform {
   }
 
   backend "remote" {
-    organization = "adajcentresearch"
+    organization = "<ORGANIZATION>"
     hostname     = "app.terraform.io"
 
     workspaces {
-      prefix = "adjacent-"
+      prefix = "<ORGANIZATION>-"
     }
   }
 }
